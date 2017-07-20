@@ -19,6 +19,7 @@ RUN adduser taco sudo
 RUN apt-get install -y npm 
 RUN npm install -g n
 RUN n stable
+RUN npm install -g create-react-app
 
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
