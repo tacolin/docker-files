@@ -1,0 +1,8 @@
+#tftp 的
+sudo docker run -d --name=tftp -p 69:69/udp -v /home/taco/tftpboot:/tftpboot server/tftp tail -f /dev/null
+
+#gitea 的
+sudo docker run -d --name=gitea -p 10022:22 -p 10080:3000 -v /home/taco/gitea:/data gitea/gitea:latest
+
+#react 的
+sudo docker run -d --name=react -p 20022:22 -p 20080:3000 -p 20443:443 -v /home/taco/proj/react:/home/taco server/react tail -f /dev/null
